@@ -140,7 +140,7 @@ function Contact() {
             { Icon: PhoneIcon, value: '09 91 21 26 49', href: 'tel:0991212649' },
             { Icon: PhoneIcon, value: '+251 95 576 7342', href: 'tel:+251955767342' },
             { Icon: MailIcon, value: 'hello@brighthometutors.com', href: 'mailto:hello@brighthometutors.com' },
-            { Icon: TelegramIcon, value: 'Goin telegram Channel 900+ subscribers', href: 'https://t.me/brighthometutors29' },
+            { Icon: TelegramIcon, value: 'join telegram Channel 900+ subscribers', href: 'https://t.me/brighthometutors29' },
             { Icon: TikTokIcon, value: 'Follow us on TikTok', href: 'https://tiktok.com/@brighthometutors' }
           ].map(c => {
             const content = (
