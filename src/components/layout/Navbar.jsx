@@ -96,7 +96,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              /* No background, no border, no boxShadow */
+              
             }}>
               <img src={logo} alt="Bright Tutore Logo" style={{ width: 100, height: 100, objectFit: 'cover', background: 'transparent' }} />
             </div>
@@ -297,7 +297,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
         <div className="flex-shrink-0 px-4 pb-6 pt-2" style={{ borderTop: "1px solid #F1F5F9" }}>
           {/* Phone */}
           <a
-            href="tel:+442079460000"
+            href="tel:0991212649"
             className="flex items-center gap-3 px-4 py-3 rounded-xl mb-3 transition-colors"
             style={{
               textDecoration: "none",
@@ -316,7 +316,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
             >📞</span>
             <div>
               <div style={{ fontSize: "0.68rem", color: "#94A3B8", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase" }}>Call us</div>
-              <div style={{ color: "#1E293B", fontWeight: 600 }}>020 7946 0000</div>
+              <div style={{ color: "#1E293B", fontWeight: 600 }}>09 91 21 26 49</div>
             </div>
           </a>
 
@@ -335,7 +335,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
             }}
           >
             <LampIcon size={16} color="#713F12" />
-            Book Your Free Trial Session
+            Contact us
           </a>
           <p className="text-center mt-2" style={{ color: "#94A3B8", fontSize: "0.72rem" }}>
             No commitment · Response within 24 hrs
@@ -346,7 +346,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
       <style>{`
         @media (max-width: 640px) {
           .navbar-logo-text {
-            font-size: 1.5rem !important;
+            font-size: 1.4rem !important;
           }
         }
         @media (min-width: 1024px) {
