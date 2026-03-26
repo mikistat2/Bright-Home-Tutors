@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logo from "../../images/bright-tutore-logo.png";
+import logo from "../../images/bright-logo-new.png";
 
 /* ─── LAMP SVG ICON ─────────────────────────────────── */
 function LampIcon({ size = 22, color = "#713F12" }) {
@@ -85,20 +85,19 @@ export default function Navbar({ scrolled: scrolledProp }) {
         }}
       >
 
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6 w-full">
+        <div className=" navbars max-w-7xl mx-auto px-6 flex items-center justify-between gap-6 w-full">
           {/* LOGO + PHONE (LEFT) */}
-          <div className="flex items-center gap-4 flex-shrink-0">
+          <div className="flex items-center gap-1 flex-shrink-0">
             <div style={{
-              width: 60,
-              height: 60,
-              borderRadius: '50%',
+              width: 100,
+              height: 80,
+              borderRadius: '12px',
               overflow: 'hidden',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              
             }}>
-              <img src={logo} alt="Bright Tutore Logo" style={{ width: 100, height: 100, objectFit: 'cover', background: 'transparent' }} />
+              <img src={logo} alt="Bright Tutore Logo" style={{ width: 180, height: 80, objectFit: 'cover', background: 'transparent', borderRadius: '12px' }} />
             </div>
             <div className="flex flex-col items-start justify-center">
               <span
@@ -347,6 +346,9 @@ export default function Navbar({ scrolled: scrolledProp }) {
         @media (max-width: 640px) {
           .navbar-logo-text {
             font-size: 1.4rem !important;
+          }
+          .navbars{
+          gap: 2
           }
         }
         @media (min-width: 1024px) {

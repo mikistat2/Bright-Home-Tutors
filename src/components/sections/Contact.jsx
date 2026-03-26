@@ -1,3 +1,18 @@
+// Facebook Icon
+const FacebookIcon = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className="text-yellow-600">
+    <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+  </svg>
+);
+// Instagram Icon
+const InstagramIcon = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-yellow-600">
+    <rect x="2" y="2" width="20" height="20" rx="6" fill="currentColor"/>
+    <circle cx="12" cy="12" r="5" fill="#fff"/>
+    <circle cx="12" cy="12" r="3.2" fill="currentColor"/>
+    <circle cx="17" cy="7" r="1.2" fill="#fff"/>
+  </svg>
+);
 import { useState } from "react";
 
 // Contact icons - same as footer
@@ -140,8 +155,10 @@ function Contact() {
             { Icon: PhoneIcon, value: '09 91 21 26 49', href: 'tel:0991212649' },
             { Icon: PhoneIcon, value: '+251 95 576 7342', href: 'tel:+251955767342' },
             { Icon: MailIcon, value: 'hello@brighthometutors.com', href: 'mailto:hello@brighthometutors.com' },
-            { Icon: TelegramIcon, value: 'join telegram Channel 900+ subscribers', href: 'https://t.me/brighthometutors29' },
-            { Icon: TikTokIcon, value: 'Follow us on TikTok', href: 'https://tiktok.com/@brighthometutors' }
+            { Icon: TelegramIcon, value: 'join telegram Channel 35,000+ subscribers', href: 'https://t.me/Brighthometutors22' },
+            { Icon: TikTokIcon, value: 'Follow us on TikTok', href: 'https://tiktok.com/@Brighthometutors22' },
+            { Icon: FacebookIcon, value: 'Like us on Facebook', href: 'https://facebook.com/brighthometutors' },
+            { Icon: InstagramIcon, value: 'Follow us on Instagram', href: 'https://instagram.com/brighthometutors' }
           ].map(c => {
             const content = (
               <>

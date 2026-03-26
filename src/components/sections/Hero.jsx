@@ -54,7 +54,7 @@ const heroSlides = [
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&q=85",
     eyebrow: "Grades K–12 · All Subjects",
     headline: ["በስነ-ምግባር እና በ እውቀት ", "የታነጹ አስተማሪዎች!"],
-    sub: "በእኛ የሰለጠኑ፣ በስነ-ምግባር የታነጹ እና የብዙ ዓመታት የማስተማር ልምድ ያላቸውን ብቁ መምህራን ከተማሪ ወላጆች ጋር እናገናኛለን።.",
+    sub: "በእኛ የሰለጠኑ፣ በስነ-ምግባር የታነጹ እና የብዙ ዓመታት የማስተማር ልምድ ያላቸውን ብቁ መምህራን ከተማሪ ወላጆች ጋር እናገናኛለን።",
     cta: "አስተማሪዎች ያግኙ",
     ctaSecondary: "Get teachers",
     ctaSecondaryHref: "#contact",
@@ -98,6 +98,7 @@ export default function HeroSection() {
         height: "100vh",
         minHeight: 640,
         overflow: "hidden",
+        paddingTop: 0,
       }}
     >
       {/* ── SLIDE BACKGROUNDS ───────────────────────────── */}
@@ -150,7 +151,7 @@ export default function HeroSection() {
           display: "flex", flexDirection: "column",
           alignItems: "center", justifyContent: "center",
           textAlign: "center",
-          padding: "0 clamp(20px,5vw,80px)",
+          padding: "0 clamp(20px,5vw,80px)", // no top padding
         }}
       >
         {/* Eyebrow badge */}
