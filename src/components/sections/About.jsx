@@ -130,7 +130,7 @@ export default function AboutSection() {
         >
           <div style={{ height: 1, width: 40, background: "#FDE047" }} />
           <span style={{
-            color: "#CA8A04", fontSize: "0.72rem", fontWeight: 700,
+            color: "#CA8A04", fontSize: "0.9rem", fontWeight: 700,
             letterSpacing: "0.22em", textTransform: "uppercase",
           }}>About Us</span>
         </div>
@@ -158,7 +158,7 @@ export default function AboutSection() {
               color: "black", fontSize: "1.4rem", lineHeight: 1.82,
               marginBottom: 16,
             }}>
-              ብሩህ የቤት አስጠኚዎች በትምህርት ከ10 ዓመት በላይ ልምድ አላቸው። እያንዳንዱ ልጅ በራሱ ልዩ መንገድ እንደሚማር እናምናለን፣ እና እያንዳንዱ ተማሪ በትክክል የሚረዳቸው አስተማሪዎች ያስፈልጋቸዋል።
+              <span className="text-amber-400 text-3xl text-bold">ብሩህ አስጠኚዎች ድርጅት</span>ብሩህ አስጠኚዎች ድርጅት በአዲስ አበባ የቤት ለቤት እና ኦንላይን የማስጠናት አገልግሎት የሚሰጥ ድርጅት ሲሆን በመምህራን አና ከዩኒቨርስቲ በጥሩ ዉጤት በተመረቁ ወጣቶች ለሁለት አመታት የተማሪዎችን ውጤት በማሻሻል ብዙ ስራዎችን ሰርተናል.ለብሄራዊ ተፈታኞች ልዩ ትኩረት መስጠታችን እና ከወላጆች ጋር አንድ ላይ መስራታችን ልዩ 𝒚ደርገናል.
 
             አስጠኚዎቻችን በደንብ የሰለጠኑ ብቻ ሳይሆን ተማሪዎች እንዲያድጉ ለማስተማር እና ለመርዳት ጥልቅ ፍቅር ያላቸው ናቸው። ከእያንዳንዱ ተማሪ ጋር ለመገናኘት ጊዜ ይወስዳሉ እና ደረጃ በደረጃ ይደግፏቸዋል።
 

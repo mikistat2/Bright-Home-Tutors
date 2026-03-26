@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import bgImage from "../../images/bright-bg-img.jpg";
 
+
+
 // Lamp Icon Component
 const LampIcon = ({ size = 20, color = "#713F12" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +176,7 @@ function Footer() {
                   href="https://t.me/Purpleew_eed"
                   className="text-white/30 text-[0.95rem] no-underline transition-colors duration-200 hover:text-white/60"
                 >
-                  Developer: <span>Mikiyas Dawit</span>
+                  Developer: <span>Mikiyas Dawit <span className="inline-block align-middle"><TelegramIcon size={20} color="orange"/></span>  </span>
                 </a>
               
             </div>

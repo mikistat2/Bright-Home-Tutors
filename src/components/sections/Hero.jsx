@@ -73,7 +73,7 @@ const heroSlides = [
 ];
 
 /* ══════════════════════════════════════════════════════
-   HERO SECTION
+   HERO SECTION 
 ══════════════════════════════════════════════════════ */
 export default function HeroSection() {
   const [cur, setCur] = useState(0);

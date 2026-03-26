@@ -51,7 +51,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
     );
     ids.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
     return () => observer.disconnect();
-  }, []);
+  }, []);                                                          
 
   /* ── lock body scroll when drawer open ── */
   useEffect(() => {
