@@ -85,7 +85,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
         }}
       >
 
-        <div className=" navbars max-w-7xl mx-auto px-6 flex items-center justify-between gap-6 w-full">
+        <div className=" navbars max-w-7xl mx-auto px-6 flex items-center justify-between gap-3 w-full">
           {/* LOGO + PHONE (LEFT) */}
           <div className="flex items-center gap-1 flex-shrink-0">
             <div style={{

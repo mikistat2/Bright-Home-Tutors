@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import heroBg from "../../images/hero-bg.png";
 
 /* ─── LAMP SVG ICON ─────────────────────────────────── */
 function LampIcon({ size = 18, color = "#FDE047" }) {
@@ -70,6 +71,16 @@ const heroSlides = [
     ctaSecondary: "Call us",
     ctaSecondaryHref: "#Contact",
   },
+  {
+    id: 4,
+    image: heroBg,
+    eyebrow: " ኑ የ ልጂዎን ነገ ዛሬ እንስራ!!! ",
+    headline: ["ብሩሆች ነን እንደስማችን", "የልጅዎን ነገ ብሩህ እናደርጋለን!"],
+    sub: " ኑ የ ልጂዎን ነገ ዛሬ እንስራ!!! የልጅዎ ነገ ካስጨነቀዎት ይደዉሉልን።",
+    cta: "የልጅዎ ነገ ካስጨነቀዎት ይደዉሉልን።",
+    ctaSecondary: "Contact Us",
+    ctaSecondaryHref: "#contact",
+  }
 ];
 
 /* ══════════════════════════════════════════════════════

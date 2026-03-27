@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import bgImage from "../../images/bright-bg-img.jpg";
+import brighLogo from "../../images/bright-logo-new.png";
 
 
 
@@ -93,17 +94,17 @@ function Footer() {
           {/* Top Section - 3 Columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pb-12 border-b border-white/10">
             {/* Brand Info */}
-            <div>
-              <div className="flex items-center gap-2.5 mb-4">
-                <div className="w-9 h-9 rounded-[10px] bg-gradient-to-br from-yellow-300 to-yellow-400 flex items-center justify-center shadow-lg">
-                  <LampIcon size={20} color="#713F12" />
+            <div className="flex flex-col items-start gap-2 min-w-[220px]">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-26 h-26 flex items-center justify-center  shadow-md">
+                  <img src={brighLogo} alt="Bright Home Tutors Logo" className="w-26 h-26 object-contain" />
                 </div>
-                <span className="font-semibold text-[1.25rem] md:text-[1.4rem]" style={{fontFamily: 'Georgia, serif'}}>
+                <span className="font-semibold text-[1.3rem] md:text-[1.5rem]" style={{fontFamily: 'Georgia, serif'}}>
                   Bright Home <span className="text-yellow-300">Tutors</span>
                 </span>
               </div>
-              <p className="text-white/60 text-[1rem] leading-[1.75] max-w-[290px]">
-                Helping students shine with personalized home tutoring in Ethiopia. We build confidence, master subjects, and achieve academic success together.
+              <p className="text-white/60 text-[1rem] leading-[1.75] max-w-[320px] mt-1">
+                Helping students shine with personalized home tutoring in Ethiopia.<br/>We build confidence, master subjects, and achieve academic success together.
               </p>
             </div>
             
