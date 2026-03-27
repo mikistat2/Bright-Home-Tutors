@@ -38,17 +38,18 @@ const heroSlides = [
     ctaSecondary: "Contact Us",
     ctaSecondaryHref: "#contact",
   },
-  
+
   {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&q=85",
-    eyebrow: "Personalised Learning at Home",
-    headline: ["Unlock Every Child's", "Brightest Potential"],
-    sub: "Expert tutors, flexible schedules, and proven methods — all delivered to your doorstep.",
-    cta: "​09-91-21-26-49",
-    ctaSecondary: "Call us",
-    ctaSecondaryHref: "#Contact",
+    id: 4,
+    image: heroBg,
+    eyebrow: " ኑ የ ልጂዎን ነገ ዛሬ እንስራ!!! ",
+    headline: ["ብሩሆች ነን እንደስማችን", "የልጅዎን ነገ ብሩህ እናደርጋለን!"],
+    sub: " ኑ የ ልጂዎን ነገ ዛሬ እንስራ!!! የልጅዎ ነገ ካስጨነቀዎት ይደዉሉልን።",
+    cta: "የልጅዎ ነገ ካስጨነቀዎት ይደዉሉልን።",
+    ctaSecondary: "Contact Us",
+    ctaSecondaryHref: "#contact",
   },
+  
 
   {
     id: 3,
@@ -72,14 +73,14 @@ const heroSlides = [
     ctaSecondaryHref: "#Contact",
   },
   {
-    id: 4,
-    image: heroBg,
-    eyebrow: " ኑ የ ልጂዎን ነገ ዛሬ እንስራ!!! ",
-    headline: ["ብሩሆች ነን እንደስማችን", "የልጅዎን ነገ ብሩህ እናደርጋለን!"],
-    sub: " ኑ የ ልጂዎን ነገ ዛሬ እንስራ!!! የልጅዎ ነገ ካስጨነቀዎት ይደዉሉልን።",
-    cta: "የልጅዎ ነገ ካስጨነቀዎት ይደዉሉልን።",
-    ctaSecondary: "Contact Us",
-    ctaSecondaryHref: "#contact",
+    id: 2,
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&q=85",
+    eyebrow: "Personalised Learning at Home",
+    headline: ["Unlock Every Child's", "Brightest Potential"],
+    sub: "Expert tutors, flexible schedules, and proven methods — all delivered to your doorstep.",
+    cta: "​09-91-21-26-49",
+    ctaSecondary: "Call us",
+    ctaSecondaryHref: "#Contact",
   }
 ];
 
