@@ -56,8 +56,8 @@ function Footer() {
   ];
 
   const contactInfo = [
-    { Icon: PhoneIcon, value: '+251 95 576 7342', href: 'tel:+251 95 576 7342' },
-    { Icon: PhoneIcon, value: '0991212649', href: 'tel:0991212649' },
+    { Icon: PhoneIcon, value: '09 95 85 10 85', href: 'tel:0995851085' },
+    { Icon: PhoneIcon, value: '09 91 21 26 49', href: 'tel:0991212649' },
     { Icon: TelegramIcon, value: 'Message on Telegram', href: 'https://t.me/brighthometutors' },
     
   ];

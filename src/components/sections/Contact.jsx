@@ -44,25 +44,32 @@ function Contact() {
     phone: "",
     email: "",
     grade: "",
-    subject: "",
+    subject: [],
     message: ""
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
 
   const subjectsList = [
-    "Mathematics", "Science", "English", "History", 
-    "Geography", "Computer Science", "Arts", "Music"
+    "Mathematics", "Science", "English", "History",
+    "Geography", "Computer Science", "Arts", "Music",
+    "Biology", "Chemistry", "Physics", "Amharic", "Other"
   ];
 
   const grades = ["Select grade", "Grade K", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const toggleSubject = (subject) => {
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      subject: prev.subject.includes(subject)
+        ? prev.subject.filter(s => s !== subject)
+        : [...prev.subject, subject]
     }));
   };
 
@@ -71,7 +78,6 @@ function Contact() {
     setIsSubmitting(true);
     setSubmitStatus({ type: "", message: "" });
 
-    // Basic validation
     if (!formData.parentName || !formData.email || !formData.phone) {
       setSubmitStatus({
         type: "error",
@@ -81,7 +87,6 @@ function Contact() {
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setSubmitStatus({
@@ -93,8 +98,7 @@ function Contact() {
     }
 
     try {
-      
-      const response = await fetch('https://formsubmit.co/ajax/miki123mbt@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/b35349489@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -105,7 +109,7 @@ function Contact() {
           phone: formData.phone,
           email: formData.email,
           grade: formData.grade,
-          subject: formData.subject,
+          subject: formData.subject.join(", "),
           message: formData.message,
           _subject: `New Tutoring Inquiry from ${formData.parentName}`,
           _template: 'table',
@@ -118,13 +122,12 @@ function Contact() {
           type: "success",
           message: "Thank you! We'll contact you within 24 hours."
         });
-        // Reset form
         setFormData({
           parentName: "",
           phone: "",
           email: "",
           grade: "",
-          subject: "",
+          subject: [],
           message: ""
         });
       } else {
@@ -149,11 +152,10 @@ function Contact() {
           <p className="text-yellow-600 text-[2rem] mb-15 tracking-[0.22em] uppercase mb-3.5">
             Contact Us
           </p>
-          
-          
-          {[ 
+
+          {[
             { Icon: PhoneIcon, value: '09 91 21 26 49', href: 'tel:0991212649' },
-            { Icon: PhoneIcon, value: '+251 95 576 7342', href: 'tel:+251955767342' },
+            { Icon: PhoneIcon, value: '09 95 85 10 85', href: 'tel:0995851085' },
             { Icon: MailIcon, value: 'hello@brighthometutors.com', href: 'mailto:hello@brighthometutors.com' },
             { Icon: TelegramIcon, value: 'join telegram Channel 35,000+ subscribers', href: 'https://t.me/Brighthometutors22' },
             { Icon: TikTokIcon, value: 'Follow us on TikTok', href: 'https://tiktok.com/@Brighthometutors22' },
@@ -189,7 +191,7 @@ function Contact() {
         {/* Right Side - Contact Form */}
         <form onSubmit={handleSubmit} className="bg-yellow-50 border-[1.5px] border-yellow-100 rounded-[28px] p-[28px] md:p-[42px_44px] shadow-[0_12px_48px_rgba(0,0,0,0.06)]">
           <h3 className="font-bold text-slate-900 text-[1.7rem] mb-6">Email Us</h3>
-          
+
           {/* Parent Name & Phone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-3.5">
             <div>
@@ -221,7 +223,7 @@ function Contact() {
               />
             </div>
           </div>
-          
+
           {/* Email */}
           <div className="mb-3.5">
             <label className="text-[1.1rem] text-slate-500 font-semibold block mb-1.5">
@@ -237,18 +239,18 @@ function Contact() {
               required
             />
           </div>
-          
+
           {/* Grade & Subject */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-3.5">
             <div>
-                <label className="text-[1.1rem] text-slate-500 font-semibold block mb-1.5">
+              <label className="text-[1.1rem] text-slate-500 font-semibold block mb-1.5">
                 Child's Grade
               </label>
               <select
                 name="grade"
                 value={formData.grade}
                 onChange={handleChange}
-                  className="w-full border-[1.5px] border-slate-200 rounded-[12px] px-3.5 py-[15px] text-[1.1rem] text-slate-900 outline-none bg-white focus:border-yellow-300 placeholder:text-[1.1rem]"
+                className="w-full border-[1.5px] border-slate-200 rounded-[12px] px-3.5 py-[15px] text-[1.1rem] text-slate-900 outline-none bg-white focus:border-yellow-300 placeholder:text-[1.1rem]"
               >
                 {grades.map(grade => (
                   <option key={grade} value={grade === "Select grade" ? "" : grade}>
@@ -257,26 +259,42 @@ function Contact() {
                 ))}
               </select>
             </div>
+
+            {/* Subject Pill Selector */}
             <div>
-                <label className="text-[1.1rem] text-slate-500 font-semibold block mb-1.5">
+              <label className="text-[1.1rem] text-slate-500 font-semibold block mb-1.5">
                 Subject Needed
+                {formData.subject.length > 0 && (
+                  <span className="ml-2 text-[0.85rem] font-normal text-yellow-700">
+                    ({formData.subject.length} selected)
+                  </span>
+                )}
               </label>
-              <select
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                  className="w-full border-[1.5px] border-slate-200 rounded-[12px] px-3.5 py-[15px] text-[1.1rem] text-slate-900 outline-none bg-white focus:border-yellow-300 placeholder:text-[1.1rem]"
-              >
-                <option value="">Select subject</option>
-                {subjectsList.map(subject => (
-                  <option key={subject} value={subject}>
-                    {subject}
-                  </option>
-                ))}
-              </select>
+              <div className="flex flex-wrap gap-2">
+                {subjectsList.map(subject => {
+                  const isSelected = formData.subject.includes(subject);
+                  return (
+                    <button
+                      key={subject}
+                      type="button"
+                      onClick={() => toggleSubject(subject)}
+                      className={`px-3 py-1.5 rounded-full text-[0.9rem] font-semibold border-[1.5px] transition-all duration-150 cursor-pointer select-none
+                        ${isSelected
+                          ? "bg-yellow-300 border-yellow-400 text-yellow-900 shadow-[0_2px_8px_rgba(253,224,71,0.35)]"
+                          : "bg-white border-slate-200 text-slate-600 hover:border-yellow-300 hover:bg-yellow-50"
+                        }`}
+                    >
+                      {isSelected && (
+                        <span className="mr-1 text-yellow-800">✓</span>
+                      )}
+                      {subject}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
-          
+
           {/* Message */}
           <div className="mb-5">
             <label className="text-[1.1rem] text-slate-500 font-semibold block mb-1.5">
@@ -291,25 +309,25 @@ function Contact() {
               className="w-full border-[1.5px] border-slate-200 rounded-[12px] px-3.5 py-[15px] text-[1.1rem] text-slate-900 outline-none resize-none bg-white focus:border-yellow-300 focus:shadow-[0_0_0_3px_rgba(253,224,71,0.18)] placeholder:text-[1.1rem]"
             />
           </div>
-          
+
           {/* Status Message */}
           {submitStatus.message && (
             <div className={`mb-4 p-3 rounded-lg text-sm ${
-              submitStatus.type === "success" 
-                ? "bg-green-100 text-green-800 border border-green-200" 
+              submitStatus.type === "success"
+                ? "bg-green-100 text-green-800 border border-green-200"
                 : "bg-red-100 text-red-800 border border-red-200"
             }`}>
               {submitStatus.message}
             </div>
           )}
-          
+
           {/* Submit Button */}
           <button
             type="submit"
             disabled={isSubmitting}
             className={`w-full bg-yellow-300 text-yellow-900 border-none font-bold text-[0.9rem] py-3.5 px-0 rounded-[12px] cursor-pointer transition-all duration-200 ${
-              isSubmitting 
-                ? "opacity-70 cursor-not-allowed" 
+              isSubmitting
+                ? "opacity-70 cursor-not-allowed"
                 : "hover:bg-yellow-400 hover:shadow-[0_6px_22px_rgba(253,224,71,0.6)]"
             } shadow-[0_4px_16px_rgba(253,224,71,0.4)]`}
           >
