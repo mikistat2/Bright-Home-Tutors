@@ -179,6 +179,16 @@ function Footer() {
                 >
                   Developer: <span>Mikiyas Dawit <span className="inline-block align-middle"><TelegramIcon size={20} color="orange"/></span>  </span>
                 </a>
+
+                <a
+                  
+                  phone="0984163441"
+                  className="text-white/30 text-[0.95rem] no-underline transition-colors duration-200 hover:text-white/60"
+                >
+                 <span>0984163441 <span className="inline-block align-middle"><PhoneIcon size={20} color="orange"/></span>  </span>
+                </a>
+
+                
               
             </div>
 
