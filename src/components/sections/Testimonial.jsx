@@ -72,7 +72,7 @@ export default function TestimonialCarousel() {
   const startTimeRef = useRef(performance.now());
 
   useEffect(() => {
-    const speed = 0.007; // Slower speed for smoother flow
+    const speed = 0.004; // Slower speed for smoother flow
     let lastTimestamp = performance.now();
 
     const animate = (timestamp) => {

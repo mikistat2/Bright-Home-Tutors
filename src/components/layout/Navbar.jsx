@@ -17,13 +17,7 @@ function LampIcon({ size = 22, color = "#713F12" }) {
 }
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Subjects", href: "#subjects" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  
 ];
 
 export default function Navbar({ scrolled: scrolledProp }) {
@@ -156,7 +150,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
           {/* PHONE BUTTON (desktop only, right) */}
           <a href="tel:+442079460000" className="hidden lg:flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 ml-4" style={{ background: 'linear-gradient(135deg,#FDE047,#FACC15)', color: '#713F12', fontWeight: 700, fontSize: '1.2rem', boxShadow: '0 3px 14px rgba(250,204,21,0.18)', textDecoration: 'none' }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#FDE047"/><path fill="#713F12" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-            <span>0991212649</span>
+            <span>0995851085</span>
           </a>
           <button
             onClick={() => setMenuOpen(o => !o)}
@@ -296,7 +290,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
         <div className="flex-shrink-0 px-4 pb-6 pt-2" style={{ borderTop: "1px solid #F1F5F9" }}>
           {/* Phone */}
           <a
-            href="tel:0991212649"
+            href="tel:0995851085"
             className="flex items-center gap-3 px-4 py-3 rounded-xl mb-3 transition-colors"
             style={{
               textDecoration: "none",
@@ -315,7 +309,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
             >📞</span>
             <div>
               <div style={{ fontSize: "0.68rem", color: "#94A3B8", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase" }}>Call us</div>
-              <div style={{ color: "#1E293B", fontWeight: 600 }}>09 91 21 26 49</div>
+              <div style={{ color: "#1E293B", fontWeight: 600 }}>09 95 85 10 85</div>
             </div>
           </a>
 
