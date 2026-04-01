@@ -98,7 +98,7 @@ function Contact() {
     }
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/b35349489@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/miki123mbt@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,9 +156,9 @@ function Contact() {
           {[
             { Icon: PhoneIcon, value: '09 91 21 26 49', href: 'tel:0991212649' },
             { Icon: PhoneIcon, value: '09 95 85 10 85', href: 'tel:0995851085' },
-            { Icon: MailIcon, value: 'hello@brighthometutors.com', href: 'mailto:hello@brighthometutors.com' },
+            { Icon: MailIcon, value: 'Email us', href: 'mailto:b35349489@gmail.com' },
             { Icon: TelegramIcon, value: 'join telegram Channel 35,000+ subscribers', href: 'https://t.me/Brighthometutors22' },
-            { Icon: TikTokIcon, value: 'Follow us on TikTok', href: 'https://tiktok.com/@Brighthometutors22' },
+            { Icon: TikTokIcon, value: 'Follow us on TikTok', href: 'https://www.tiktok.com/@bright.home.tutors?is_from_webapp=1&sender_device=pc' },
             { Icon: FacebookIcon, value: 'Like us on Facebook', href: 'https://facebook.com/brighthometutors' },
             { Icon: InstagramIcon, value: 'Follow us on Instagram', href: 'https://instagram.com/brighthometutors' }
           ].map(c => {
