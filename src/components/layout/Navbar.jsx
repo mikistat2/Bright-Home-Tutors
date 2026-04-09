@@ -16,8 +16,15 @@ function LampIcon({ size = 22, color = "#713F12" }) {
   );
 }
 
+
+
 const navLinks = [
-  
+  {label: "Home", href: "#home"},
+  {label: "About", href: "#about"},
+  {label: "Services", href: "#services"},
+  {label: "Testimonials", href: "#testimonials"},
+  {label: "Subjects", href: "#subjects"},
+  {label: "Contact", href: "#contact"},
 ];
 
 export default function Navbar({ scrolled: scrolledProp }) {
