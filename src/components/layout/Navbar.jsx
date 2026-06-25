@@ -101,17 +101,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
               <img src={logo} alt="Bright Tutore Logo" style={{ width: 180, height: 80, objectFit: 'cover', background: 'transparent', borderRadius: '12px' }} />
             </div>
             <div className="flex flex-col items-start justify-center">
-              <span
-                className="font-semibold tracking-tight navbar-logo-text"
-                style={{
-                  fontFamily: 'Georgia,serif',
-                  fontSize: '1.6rem',
-                  color: scrolled ? '#1E293B' : '#fff',
-                  letterSpacing: '0.01em',
-                }}
-              >
-                Bright Home <span style={{ color: '#FDE047' }}>Tutors</span>
-              </span>
+              
               
             </div>
           </div>
