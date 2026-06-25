@@ -25,7 +25,7 @@ const navLinks = [
   {label: "Testimonials", href: "#testimonials"},
   {label: "Subjects", href: "#subjects"},
   {label: "Contact", href: "#contact"},
-];
+];                                               
 
 export default function Navbar({ scrolled: scrolledProp }) {
   const [scrolled, setScrolled] = useState(scrolledProp ?? false);
@@ -155,7 +155,7 @@ export default function Navbar({ scrolled: scrolledProp }) {
           </ul>
 
           {/* PHONE BUTTON (desktop only, right) */}
-          <a href="tel:+442079460000" className="hidden lg:flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 ml-4" style={{ background: 'linear-gradient(135deg,#FDE047,#FACC15)', color: '#713F12', fontWeight: 700, fontSize: '1.2rem', boxShadow: '0 3px 14px rgba(250,204,21,0.18)', textDecoration: 'none' }}>
+          <a href="tel:+442079460000" className="hidden lg:flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 ml-1" style={{ background: 'linear-gradient(135deg,#FDE047,#FACC15)', color: '#713F12', fontWeight: 700, fontSize: '1.2rem', boxShadow: '0 3px 14px rgba(250,204,21,0.18)', textDecoration: 'none' }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#FDE047"/><path fill="#713F12" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
             <span>0995851085</span>
           </a>
